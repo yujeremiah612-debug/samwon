@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-theme-bg: #FFFFFF;
+  --color-theme-surface: #F9F8F6; /* Clean Neutral */
+  --color-theme-paper: #FFFFFF;
+  --color-theme-red: #C15E41; /* Deeper Kimchi */
+  --color-theme-tan: #8C6A4F; /* Deeper Tan */
+  --color-theme-sage: #6B705C; /* Deeper Sage */
+  --color-theme-ink: #181512; /* Darkest Coffee */
+  --color-theme-accent: #B68669;
+}
+
+@layer base {
+  body {
+    @apply bg-theme-bg text-theme-ink font-sans antialiased;
+  }
+}
+
+@theme {
+  --color-theme-sage: var(--color-theme-sage);
+  --color-theme-tan: var(--color-theme-tan);
+  --color-theme-kimchi: var(--color-theme-red);
+  --color-theme-apricot: var(--color-theme-apricot);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
